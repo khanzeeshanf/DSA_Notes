@@ -150,4 +150,105 @@ class palindrome {
  
         return true;
     }
-  
+
+
+      //Write code to Calculate frequency of characters in a string
+
+
+      public static void prCharWithFreq(string s)
+    {
+ 
+        // Store all characters and
+        // their frequencies in dictionary
+        Dictionary<char, int> d
+            = new Dictionary<char, int>();
+ 
+        foreach(char i in s)
+        {
+            if (d.ContainsKey(i)) {
+                d[i]++;
+            }
+            else {
+                d[i] = 1;
+            }
+        }
+ 
+        // Print characters and their
+        // frequencies in same order
+        // of their appearance
+        foreach(char i in s)
+        {
+            // Print only if this
+            // character is not printed
+            // before
+            if (d[i] != 0) {
+                Console.Write(i + d[i].ToString() + " ");
+                d[i] = 0;
+            }
+        }
+    }
+ // Time Complexity: O(n), where n is the number of characters in the string. 
+//Auxiliary Space: O(n), 
+
+
+      //--------------
+//Given two strings where first string may contain wild card characters and second string is a normal string.
+//Write a function that returns true if the two strings match. The following are allowed wild card characters in first string. 
+
+//* --> Matches with 0 or more instances of any character or set of characters.
+//? --> Matches with any one character.
+
+
+
+
+
+//Write to code to check whether a given year is leap year or not.
+//A year is a leap year if the following conditions are satisfied: 
+
+//The year is multiple of 400.
+//The year is multiple of 4 and not multiple of 100.
+      static bool checkYear(int year)
+    {
+        // Return true if year is a multiple
+        // of 4 and not multiple of 100.
+        // OR year is multiple of 400.
+        return (((year % 4 == 0) && (year % 100 != 0)) ||
+                (year % 400 == 0));
+    }
+
+     // Time Complexity: O(1)
+
+      //Auxiliary Space: O(1)
+
+
+//Write a code to find circular rotation of an array by K positions.
+//Input: arr[] = {1, 2, 3, 4, 5, 6, 7}, d = 2
+// Output: 3 4 5 6 7 1 2
+public static void rotate(int[] arr, int d, int n)
+    {
+        var p = 1;
+        while (p <= d)
+        {
+            var last = arr[0];
+            for (int i = 0; i < n - 1; i++)
+            {
+                arr[i] = arr[i + 1];
+            }
+            arr[n - 1] = last;
+            p++;
+        }
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(arr[i].ToString() + " ");
+        }
+    }
+    //  Time Complexity: O(N * d)
+//Auxiliary Space: O(1)
+
+      
+      
+
+
+      
+
+      
