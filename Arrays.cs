@@ -51,3 +51,24 @@ void LeftRotate(int[] arr, int d)
     Reverse(arr, d, n - 1);
     Reverse(arr, 0, n - 1);
 }
+
+
+//--------------------------------------------//
+//[3]Print array after it is right rotated K times 
+//Using Reversal Algorithm - O(n) Time and O(1) Space
+static void RightRotate(int[] arr, int k)
+    {
+        int n = arr.Length;
+        k %= n; // In case k > n
+        Reverse(arr, 0, n - 1);
+        Reverse(arr, 0, k - 1);
+        Reverse(arr, k, n - 1);
+    }
+
+// input
+int[] arr = { 1, 2, 3, 4, 5 };
+        int k = 2;
+
+        RightRotate(arr, k);
+
+//-----------------------------------------//
