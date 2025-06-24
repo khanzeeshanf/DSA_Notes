@@ -101,4 +101,34 @@ class Program
 }
 
 
-//--------------
+//---------------------------------//
+// if an array is a palindrome
+using System;
+
+class Program
+{
+    static bool IsPalindrome(int[] arr)
+    {
+        int left = 0;
+        int right = arr.Length - 1;
+
+        while (left < right)
+        {
+            if (arr[left] != arr[right])
+                return false;
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3, 2, 1 };
+
+        Console.WriteLine(IsPalindrome(arr) ? "Palindrome" : "Not Palindrome");
+    }
+}
+
+
