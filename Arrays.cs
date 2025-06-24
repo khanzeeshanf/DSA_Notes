@@ -72,3 +72,33 @@ int[] arr = { 1, 2, 3, 4, 5 };
         RightRotate(arr, k);
 
 //-----------------------------------------//
+
+
+//SEARCHING
+//Linear Search
+using System;
+
+class Program
+{
+    static int LinearSearch(int[] arr, int target)
+    {
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] == target)
+                return i; // Found at index i
+        }
+        return -1; // Not found
+    }
+
+    static void Main()
+    {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int target = 30;
+
+        int index = LinearSearch(arr, target);
+        Console.WriteLine(index >= 0 ? $"Found at index {index}" : "Not found");
+    }
+}
+
+
+//--------------
