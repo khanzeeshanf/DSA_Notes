@@ -131,4 +131,24 @@ class Program
     }
 }
 
+//---------------------------------------------------------------------//
+//Find the Largest element in an array//
+ public static void Main(string[] args)
+    {
+        Console.WriteLine ("Q: Find the Largest element in an array");
+        int[] arr = {2,5,1,7,0};//for this input output should be 7
+        
+        int largest = arr[0];
+        
+        for(int i=1 ; i<arr.Length-1 ; i++)
+        {
+            if(arr[i]>largest)
+                largest=arr[i];
+        }
+
+        Console.WriteLine ($"Largest element in an array :{largest}");
+        
+        
+    }
+
 
