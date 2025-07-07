@@ -152,3 +152,28 @@ class Program
     }
 
 
+//---------------------------------------------------------------------//
+//Check if an Array is Sorted
+public static void Main(string[] args)
+    {
+        Console.WriteLine ("Q: Check if an Array is Sorted");
+        int[] arr = {1,2,3,4,6,7,8,8};//return fasle
+        string result= IsArraySorted(arr)? "Sorted": "Unsorted";
+    
+        Console.WriteLine ($"Array is {result}");
+        
+        
+    }
+    
+    public static bool IsArraySorted(int[] arr)
+    {
+    
+        for(int i=0 ; i<arr.Length-1 ; i++)
+        {
+            if(arr[i]>arr[i+1])
+                return false;
+        }
+
+    return true;
+    }
+
